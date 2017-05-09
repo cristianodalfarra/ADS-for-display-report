@@ -19,6 +19,7 @@ function productName() {
     if (row[3].indexOf("CONSIGLIA") !=-1)         {sheet.getRange(r,15).setValue('CAT');}
     if (row[3].indexOf("elenco") !=-1)         {sheet.getRange(r,15).setValue('CAT');}
     if (row[3].indexOf("DCX1_") !=-1 && row[1].indexOf("300 x 200") !=-1)         {sheet.getRange(r,15).setValue('CAT');}
+    if (row[3].indexOf("DCX1_") !=-1 && row[1].indexOf("720 x 180") !=-1)         {sheet.getRange(r,15).setValue('CAT');}
     if (row[1].indexOf("Fuori pagina") !=-1 )         {sheet.getRange(r,15).setValue('CAT');}
     
     if (row[3].indexOf("HP") !=-1)         {sheet.getRange(r,15).setValue('HP');}
@@ -124,7 +125,7 @@ function productName_label()
     if (row[3].indexOf("LEAD_PUB") !=-1)            {sheet.getRange(r,10).setValue('LEAD_PUB');}
     if (row[3].indexOf("LEAD_VETRINA") !=-1)            {sheet.getRange(r,10).setValue('LEAD_VETRINA');}
     
-    if (row[3].indexOf("SKIN_CAT") !=-1 || row[3].indexOf("PUMA") !=-1)           {sheet.getRange(r,10).setValue('SKIN_CAT');}
+    if (row[3].indexOf("SKIN_CAT") !=-1)            {sheet.getRange(r,10).setValue('SKIN_CAT');}
     if (row[3].indexOf("SKIN_HP") !=-1)            {sheet.getRange(r,10).setValue('SKIN_HP');}
     
     if (row[3].indexOf("SKY_CAT") !=-1)            {sheet.getRange(r,10).setValue('SKY_CAT');}
@@ -151,6 +152,8 @@ function productName_label()
     
      if (row[3].indexOf("DCX1_") !=-1 &&  row[1].indexOf("300 x 200") !=-1)            {sheet.getRange(r,10).setValue('DCX1_CAT');}
     if (row[3].indexOf("ADEXCHANGE") !=-1 )            {sheet.getRange(r,10).setValue('ADEXCHANGE');}
+    //native
+    if (row[3].indexOf("PUMA") !=-1 || row[1].indexOf("720 x 180") !=-1 )            {sheet.getRange(r,10).setValue('Native');}
     
     var x= row[3].substr(0,2);
 Logger.log(x);  
@@ -203,7 +206,7 @@ function productName_label_inevaso()
     if (row[0].indexOf("LEAD_PUB") !=-1)            {sheet.getRange(r,10).setValue('LEAD_PUB');}
     if (row[0].indexOf("LEAD_VETRINA") !=-1)            {sheet.getRange(r,10).setValue('LEAD_VETRINA');}
     
-    if (row[0].indexOf("SKIN_CAT") !=-1 || row[0].indexOf("PUMA") !=-1 )            {sheet.getRange(r,10).setValue('SKIN_CAT');}
+    if (row[0].indexOf("SKIN_CAT") !=-1)           {sheet.getRange(r,10).setValue('SKIN_CAT');}
     if (row[0].indexOf("SKIN_HP") !=-1)            {sheet.getRange(r,10).setValue('SKIN_HP');}
     
     if (row[0].indexOf("SKY_CAT") !=-1)            {sheet.getRange(r,10).setValue('SKY_CAT');}
@@ -233,7 +236,9 @@ Logger.log(x);
 	
     if (row[0].indexOf("ADEXCHANGE_leaderboard") !=-1)            {sheet.getRange(r,10).setValue('ADEXCHANGE_leaderboard');}  
     
-    
+    // native
+    if (row[0].indexOf("DCX1_") !=-1)            {sheet.getRange(r,10).setValue('Native');}  
+    if (row[0].indexOf("PUMA") !=-1)            {sheet.getRange(r,10).setValue('Native');}  
     
     
         if (row[0].indexOf("ADV_MOB_CAT_LEADTOP") !=-1)            {sheet.getRange(r,10).setValue('ADV_MOB_CAT_LEADTOP');}
