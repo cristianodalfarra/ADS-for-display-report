@@ -125,10 +125,11 @@ function generateReport_2weeks() {
   a= report.length+1
   sheet.getRange('A2:d'+ a).setValues(report);
     
-  
+//  
   var report = AdSense.Reports.generate(startDate_1, endDate_1, args).getRows();
-   sheet.getRange('i2:l'+a).setValues(report); 
-    
+  a= report.length+1
+    sheet.getRange('i2:l'+a).setValues(report); 
+//    
 //  for (var i=0; i<report.length; i++) {
 //    var row = report[i];
 //    sheet.getRange('A' + String(i+2)).setValue(row[0]);
@@ -181,7 +182,8 @@ function compareReport_2weeks() {
     
   
   var report = AdSense.Reports.generate(startDate_1, endDate_1, args).getRows();
-   sheet.getRange('i2:l'+a).setValues(report); 
+  a= report.length+1 
+  sheet.getRange('i2:l'+a).setValues(report); 
   
   
   
